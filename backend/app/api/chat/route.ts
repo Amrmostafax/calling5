@@ -5,12 +5,7 @@ import fs from 'fs';
 // Initialize Google Gemini
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// Disable Next.js body parsing to handle file uploads
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+
 
 // Helper function to convert audio to base64
 function fileToBase64(filePath: string): string {
