@@ -1,0 +1,9 @@
+# Ensure gradlew always has Unix line endings (LF) even on Windows
+gradlew text eol=lf
+*.sh text eol=lf
+
+# Windows scripts should have Windows line endings
+*.bat text eol=crlf
+
+# Auto detect text files and normalize to LF
+* text=auto
