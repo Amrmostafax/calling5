@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        serverActions: {
-            bodySizeLimit: '10mb',
-        },
-    },
+  /*  completely remove experimental.serverActions  */
+  experimental: {},
 }
 
 module.exports = nextConfig
+
