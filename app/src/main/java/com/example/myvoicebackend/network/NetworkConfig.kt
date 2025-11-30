@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 object NetworkConfig {
     // ⚠️ IMPORTANT: Replace this with your actual Vercel URL after deployment
     // Example: "https://your-app-name.vercel.app/"
-   private const val BASE_URL = "https://calling5.vercel.app/"
+   private const val BASE_URL = "https://calling5-wq.vercel.app/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
@@ -30,5 +30,6 @@ object NetworkConfig {
 
     val apiService: ApiService = retrofit.create(ApiService::class.java)
 }
+
 
 
