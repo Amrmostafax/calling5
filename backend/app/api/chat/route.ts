@@ -5,8 +5,6 @@ import fs from 'fs';
 // Initialize Google Gemini
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-
-
 // Helper function to convert audio to base64
 function fileToBase64(filePath: string): string {
   const fileData = fs.readFileSync(filePath);
@@ -115,7 +113,7 @@ Return ONLY the JSON, no other text.`,
     return NextResponse.json(
       {
         error: 'Failed to process audio',
-        details: error.message
+        details: error.message,
       },
       { status: 500 }
     );
@@ -132,3 +130,6 @@ export async function GET() {
     model: 'gemini-1.5-flash',
   });
 }
+
+// ✅ App Router segment config (replaces deprecated Pages-Router config)
+export const maxDuration = 60; // Vercel hobby tier max
